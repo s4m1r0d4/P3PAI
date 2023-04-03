@@ -1,20 +1,10 @@
-﻿// using System.Security.Cryptography;
-// using System.Text;
-// Si solo incluyes esto de arriba no jala, increible
-
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Xml.Linq;
-using static System.Convert;
 
 namespace CryptographyLibrary;
 
 public static class Protector
 {
-    // salt
     private static readonly byte[] salt = Encoding.Unicode.GetBytes("chinnnngado");
     private static readonly int iterations = 2000;
     public static string Encrypt(string plainText, string password)
@@ -27,7 +17,7 @@ public static class Protector
         var pbkdf2 = new Rfc2898DeriveBytes(password, salt, iterations);
 
         aes.Key = pbkdf2.GetBytes(32); // 256-bit key
-        aes.IV = pbkdf2.GetBytes(16); // 128- bit IV
+        aes.IV = pbkdf2.GetBytes(16); // 128-bit IV
 
         /* // Scoped 'using' directive
         using MemoryStream ms = new();
