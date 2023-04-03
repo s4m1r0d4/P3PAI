@@ -1,0 +1,5 @@
+/home/rc/Documents/PAI/Practica3/lib/CryptographyLibrary/obj/Debug/net7.0/CryptographyLibrary.csproj.AssemblyReference.cache
+/home/rc/Documents/PAI/Practica3/lib/CryptographyLibrary/obj/Debug/net7.0/CryptographyLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/rc/Documents/PAI/Practica3/lib/CryptographyLibrary/obj/Debug/net7.0/CryptographyLibrary.AssemblyInfoInputs.cache
+/home/rc/Documents/PAI/Practica3/lib/CryptographyLibrary/obj/Debug/net7.0/CryptographyLibrary.AssemblyInfo.cs
+/home/rc/Documents/PAI/Practica3/lib/CryptographyLibrary/obj/Debug/net7.0/CryptographyLibrary.csproj.CoreCompileInputs.cache
