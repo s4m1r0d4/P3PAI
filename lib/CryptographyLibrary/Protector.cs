@@ -22,7 +22,6 @@ public static class Protector
         byte[] encryptedBytes;
         byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
 
-
         var aes = Aes.Create();
         // Ni modo carnal, te quedas desactualizado porque sino me caen los demonios
         var pbkdf2 = new Rfc2898DeriveBytes(password, salt, iterations);
@@ -30,13 +29,13 @@ public static class Protector
         aes.Key = pbkdf2.GetBytes(32); // 256-bit key
         aes.IV = pbkdf2.GetBytes(16); // 128- bit IV
 
-        /*      // Scoped 'using' directive
-                using MemoryStream ms = new();
-                using CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write);
+        /* // Scoped 'using' directive
+        using MemoryStream ms = new();
+        using CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write);
 
-                cs.Write(plainBytes, 0, plainBytes.Length);
-                encryptedBytes = ms.ToArray();
-                // Esta madre está bien curseada */
+        cs.Write(plainBytes, 0, plainBytes.Length);
+        encryptedBytes = ms.ToArray();
+        // Esta madre está bien curseada */
 
         using (var ms = new MemoryStream()) {
             using (var cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write)) {
