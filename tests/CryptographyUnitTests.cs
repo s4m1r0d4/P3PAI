@@ -35,6 +35,16 @@ public class CryptographyUnitTests
     [Fact]
     public void TestFailDecryptWithWrongPassword()
     {
-        // TODO: implement this
+        string encryptedText = "fdtjSsjGbPxf+KluxU1Q2A==";
+        string password = "distinto";
+        string result = String.Empty;
+
+        try {
+            result = Protector.Decrypt(encryptedText, password);
+        } catch {
+            return;
+        }
+
+        Assert.True(false, "Decryption should've thrown an excpetion because password was incorrect");
     }
 }
