@@ -11,5 +11,9 @@ UnitTest
 
 # How to run
 
-$ cd src
-$ dotnet run
+`$ cd src`  
+`$ dotnet run`  
+
+# How to test
+`$ cd tests`  
+`$ dotnet test`  
