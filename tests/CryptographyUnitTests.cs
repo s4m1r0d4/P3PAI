@@ -42,6 +42,7 @@ public class CryptographyUnitTests
         try {
             result = Protector.Decrypt(encryptedText, password);
         } catch {
+            // Exception was expected, return
             return;
         }
 

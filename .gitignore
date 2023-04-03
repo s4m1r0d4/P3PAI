@@ -1,0 +1,3 @@
+# Ignore .NET compilation files
+./**/bin
+./**/obj
