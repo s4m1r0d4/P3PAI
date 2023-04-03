@@ -31,4 +31,10 @@ public class CryptographyUnitTests
 
         Assert.True(result.Length > 0, "Failed decrypting");
     }
+
+    [Fact]
+    public void TestFailDecryptWithWrongPassword()
+    {
+        // TODO: implement this
+    }
 }

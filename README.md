@@ -8,3 +8,8 @@ Serialization / Deserialization (Data Encoding)
 Person Class  
 Encrypter / Decrypter (Data Security)  
 UnitTest  
+
+# How to run
+
+$ cd src
+$ dotnet run
