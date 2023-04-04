@@ -93,7 +93,7 @@ class Program
     }
 
     /// <summary>
-    /// Reads children information; FirstName.
+    /// Reads children information (FirstName).
     /// </summary>
     /// <param name="numberOfChildren"></param>
     /// <returns>List of Children read</returns>
@@ -157,6 +157,11 @@ class Program
 
         do {
             key = Console.ReadKey(true);
+
+            if (key.Key == ConsoleKey.Backspace && sb.Length >= 0) {
+                sb.Remove(sb.Length - 1, 1);
+                Console.Write("\b \b");
+            }
 
             // Ignore any key out of range.
             if (!char.IsControl(key.KeyChar)) {
