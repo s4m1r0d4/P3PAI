@@ -1,0 +1,15 @@
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.csproj.AssemblyReference.cache
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.AssemblyInfoInputs.cache
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.AssemblyInfo.cs
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.csproj.CoreCompileInputs.cache
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/bin/Debug/net7.0/SerializationLibrary.deps.json
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/bin/Debug/net7.0/SerializationLibrary.dll
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/bin/Debug/net7.0/SerializationLibrary.pdb
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/bin/Debug/net7.0/PeopleLibrary.dll
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/bin/Debug/net7.0/PeopleLibrary.pdb
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.csproj.CopyComplete
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.dll
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/refint/SerializationLibrary.dll
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/SerializationLibrary.pdb
+/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/Debug/net7.0/ref/SerializationLibrary.dll

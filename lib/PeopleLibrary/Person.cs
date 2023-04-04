@@ -9,5 +9,5 @@ public class Person
     private ulong BankAccount { get; set; }
 
     //  Encrypted Password
-    private string? BanKPassword { get; }
+    private string? BankPassword { get; }
 }

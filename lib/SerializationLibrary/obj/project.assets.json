@@ -11,38 +11,19 @@
         "runtime": {
           "bin/placeholder/PeopleLibrary.dll": {}
         }
-      },
-      "SerializationLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "PeopleLibrary": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SerializationLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SerializationLibrary.dll": {}
-        }
       }
     }
   },
   "libraries": {
     "PeopleLibrary/1.0.0": {
       "type": "project",
-      "path": "../lib/PeopleLibrary/PeopleLibrary.csproj",
-      "msbuildProject": "../lib/PeopleLibrary/PeopleLibrary.csproj"
-    },
-    "SerializationLibrary/1.0.0": {
-      "type": "project",
-      "path": "../lib/SerializationLibrary/SerializationLibrary.csproj",
-      "msbuildProject": "../lib/SerializationLibrary/SerializationLibrary.csproj"
+      "path": "../PeopleLibrary/PeopleLibrary.csproj",
+      "msbuildProject": "../PeopleLibrary/PeopleLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "PeopleLibrary >= 1.0.0",
-      "SerializationLibrary >= 1.0.0"
+      "PeopleLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -51,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/rc/Documents/PAI/Practica3/src/src.csproj",
-      "projectName": "src",
-      "projectPath": "/home/rc/Documents/PAI/Practica3/src/src.csproj",
+      "projectUniqueName": "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/SerializationLibrary.csproj",
+      "projectName": "SerializationLibrary",
+      "projectPath": "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/SerializationLibrary.csproj",
       "packagesPath": "/home/rc/.nuget/packages/",
-      "outputPath": "/home/rc/Documents/PAI/Practica3/src/obj/",
+      "outputPath": "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/rc/.nuget/NuGet/NuGet.Config"
@@ -72,9 +53,6 @@
           "projectReferences": {
             "/home/rc/Documents/PAI/Practica3/lib/PeopleLibrary/PeopleLibrary.csproj": {
               "projectPath": "/home/rc/Documents/PAI/Practica3/lib/PeopleLibrary/PeopleLibrary.csproj"
-            },
-            "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/SerializationLibrary.csproj": {
-              "projectPath": "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/SerializationLibrary.csproj"
             }
           }
         }

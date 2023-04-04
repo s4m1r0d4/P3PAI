@@ -6,20 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "src/1.0.0": {
-        "dependencies": {
-          "PeopleLibrary": "1.0.0",
-          "SerializationLibrary": "1.0.0"
-        },
-        "runtime": {
-          "src.dll": {}
-        }
-      },
-      "PeopleLibrary/1.0.0": {
-        "runtime": {
-          "PeopleLibrary.dll": {}
-        }
-      },
       "SerializationLibrary/1.0.0": {
         "dependencies": {
           "PeopleLibrary": "1.0.0"
@@ -27,21 +13,21 @@
         "runtime": {
           "SerializationLibrary.dll": {}
         }
+      },
+      "PeopleLibrary/1.0.0": {
+        "runtime": {
+          "PeopleLibrary.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "src/1.0.0": {
+    "SerializationLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "PeopleLibrary/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SerializationLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
