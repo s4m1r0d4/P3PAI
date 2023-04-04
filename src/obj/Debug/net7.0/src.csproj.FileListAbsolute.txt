@@ -18,3 +18,4 @@
 /home/rc/Documents/PAI/Practica3/src/bin/Debug/net7.0/SerializationLibrary.pdb
 /home/rc/Documents/PAI/Practica3/src/bin/Debug/net7.0/PeopleLibrary.pdb
 /home/rc/Documents/PAI/Practica3/src/obj/Debug/net7.0/src.csproj.CopyComplete
+/home/rc/Documents/PAI/Practica3/src/bin/Debug/net7.0/Newtonsoft.Json.dll
