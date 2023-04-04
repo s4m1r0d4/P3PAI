@@ -1,3 +1,8 @@
 # Ignore .NET compilation files
-./**/bin
-./**/obj
+./**/bin/
+./**/obj/
+
+
+# ignote test files
+*.json
+*.xml
