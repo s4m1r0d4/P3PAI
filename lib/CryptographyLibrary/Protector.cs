@@ -5,7 +5,8 @@ namespace CryptographyLibrary;
 
 public static class Protector
 {
-    private static readonly byte[] salt = Encoding.Unicode.GetBytes("chinnnngado");
+    public static readonly string specialWord = "chinnnngado";
+    private static readonly byte[] salt = Encoding.Unicode.GetBytes(specialWord);
     private static readonly int iterations = 2000;
     public static string Encrypt(string plainText, string password)
     {

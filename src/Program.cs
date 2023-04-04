@@ -52,7 +52,7 @@ class Program
         Person p = new();
         p.FirstName = FirstName;
         p.LastName = LastName;
-        p.BankPassword = Protector.Encrypt(Password, "chinnnngado");
+        p.BankPassword = Protector.Encrypt(Password, Protector.specialWord);
 
         decimal? Salary = null;
         do {
@@ -120,7 +120,9 @@ class Program
         foreach (var p in people) {
             if (p.FirstName == FirstName && p.LastName == LastName) {
                 // Check password
-                if (String.Equals(Protector.Decrypt(p.BankPassword, "chinnnngado"), Password)) {
+                if (String.Equals(
+                        Protector.Decrypt(p.BankPassword, Protector.specialWord),
+                        Password)) {
                     return p;
                 }
             }
