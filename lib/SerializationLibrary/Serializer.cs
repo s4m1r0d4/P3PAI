@@ -48,7 +48,7 @@ public class Serializer
     /// you can assign your list to the peopleData field.
     /// </summary>
     /// <returns></returns>
-    public async void Deserialize()
+    public async Task Deserialize()
     {
         List<Person>? jsonPeople = new();
         List<Person>? xmlPeople = new();
@@ -66,7 +66,7 @@ public class Serializer
         }
         // Lazy check if equal data is read. Further checking can be done in unit tests
         if (jsonPeople.Count != xmlPeople.Count)
-            throw new Exception("Read diferent data from json and xml files!");
+            throw new Exception("Read different data from json and xml files!");
 
         // Can either be jsonPeople or xmlPeople
         peopleData = jsonPeople;
