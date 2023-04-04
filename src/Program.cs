@@ -158,7 +158,7 @@ class Program
         do {
             key = Console.ReadKey(true);
 
-            if (key.Key == ConsoleKey.Backspace && sb.Length >= 0) {
+            if (key.Key == ConsoleKey.Backspace && sb.Length > 0) {
                 sb.Remove(sb.Length - 1, 1);
                 Console.Write("\b \b");
             }
