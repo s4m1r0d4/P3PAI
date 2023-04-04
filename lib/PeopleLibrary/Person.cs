@@ -1,5 +1,5 @@
 ﻿namespace PeopleLibrary;
-using static System.Console;
+
 public class Person : IEquatable<Person>
 {
     public decimal Salary { get; set; }
@@ -22,14 +22,14 @@ public class Person : IEquatable<Person>
         return Equals(other);
     }
 
+    public override int GetHashCode()
+    {
+        return BankAccount;
+    }
+
     public bool Equals(Person other)
     {
         if (other == null) return false;
         return this.BankAccount.Equals(other.BankAccount);
-    }
-
-    public override int GetHashCode()
-    {
-        return BankAccount;
     }
 }

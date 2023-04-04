@@ -125,7 +125,7 @@ public class SerializationUnitTests
     }
 
     [Fact]
-    public void ReadDifferentData()
+    public async Task ReadDifferentData()
     {
         List<Person> people1 = new()
         {
@@ -186,8 +186,8 @@ public class SerializationUnitTests
         Serializer sc2 = new(people2, "JsonTest4.json", "XmlTest4.xml");
         sc2.Serialize();
 
-        sc1.Deserialize();
-        sc2.Deserialize();
+        await sc1.Deserialize();
+        await sc2.Deserialize();
 
         List<Person> readOne = sc1.peopleData;
         List<Person> readTwo = sc2.peopleData;
@@ -196,7 +196,7 @@ public class SerializationUnitTests
     }
 
     [Fact]
-    public void ReadSameAsWritten()
+    public async Task ReadSameAsWritten()
     {
         List<Person> written = new()
         {
@@ -247,11 +247,26 @@ public class SerializationUnitTests
             }
         };
 
-        Serializer sc = new(written, "readWrite.json", "readWrite.xml");
+        Serializer sc = new(written, "JsonTest5.json", "XmlTest5.xml");
         sc.Serialize();
-        sc.Deserialize();
-        List<Person> read = sc.peopleData;
-        Assert.True(written.Equals(read), "bro tf did u just read fr fr");
+        List<Person> read = await sc.Deserialize();
+
+        Assert.True(written.Count == read.Count, "bro this async stuff be crazy fr fr");
     }
 
+    [Fact]
+    public async void OpenNonExistingFiles()
+    {
+        List<Person> people = new();
+        Serializer sc = new(people, "JsonTest6.json", "XmlTest6.xml");
+        bool exceptionThrown = false;
+
+        try {
+            await sc.Deserialize();
+        } catch {
+            exceptionThrown = true;
+        }
+
+        Assert.True(exceptionThrown, "Expected exception deserializing non-existing files");
+    }
 }

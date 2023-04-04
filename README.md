@@ -17,4 +17,4 @@
 
 # How to test
 `$ cd tests`  
-`$ dotnet test`  
+`$ ./test.sh`  

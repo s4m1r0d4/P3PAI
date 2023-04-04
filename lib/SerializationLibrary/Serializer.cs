@@ -44,11 +44,10 @@ public class Serializer
     }
 
     /// <summary>
-    /// Deserializes files into peopleData field. After calling this method,
-    /// you can assign your list to the peopleData field.
+    /// Deserializes files into peopleData field.==
     /// </summary>
-    /// <returns></returns>
-    public async Task Deserialize()
+    /// <Usage>List<Person> x = await serializer.Deserialize() </Usage>
+    public async Task<List<Person>> Deserialize()
     {
         List<Person>? jsonPeople = new();
         List<Person>? xmlPeople = new();
@@ -70,5 +69,6 @@ public class Serializer
 
         // Can either be jsonPeople or xmlPeople
         peopleData = jsonPeople;
+        return peopleData;
     }
 }
