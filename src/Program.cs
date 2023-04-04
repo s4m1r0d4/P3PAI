@@ -38,7 +38,6 @@ class Program
                 WriteLine($"Account with these credentials wasn't found, creating new account...");
                 p = GetNewPerson();
                 people.Add(p);
-                sc = new(people);
                 sc.Serialize();
                 WriteLine("Login succesfull!");
             }
