@@ -87,7 +87,11 @@
 /home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 /home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 /home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/CryptographyLibrary.dll
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.dll
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.dll
 /home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/CryptographyLibrary.pdb
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.pdb
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.pdb
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.csproj.AssemblyReference.cache
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.GeneratedMSBuildEditorConfig.editorconfig
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.AssemblyInfoInputs.cache
@@ -99,7 +103,3 @@
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.pdb
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.genruntimeconfig.cache
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/ref/tests.dll
-/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.dll
-/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.dll
-/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.pdb
-/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.pdb

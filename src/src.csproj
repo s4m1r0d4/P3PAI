@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="../lib/SerializationLibrary/SerializationLibrary.csproj"/>
     <ProjectReference Include="../lib/PeopleLibrary/PeopleLibrary.csproj"/>
+    <ProjectReference Include="../lib/CryptographyLibrary/CryptographyLibrary.csproj"/>
   </ItemGroup>
 
 </Project>

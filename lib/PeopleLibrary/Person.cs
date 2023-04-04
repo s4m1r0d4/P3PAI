@@ -1,6 +1,6 @@
 ﻿namespace PeopleLibrary;
 
-public class Person : IEquatable<Person>
+public class Person : IEquatable<Person>, IComparer<Person>
 {
     public decimal Salary { get; set; }
     public string? FirstName { get; set; }
@@ -13,12 +13,12 @@ public class Person : IEquatable<Person>
     public Person()
     { }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (obj == null || GetType() != obj.GetType()) {
             return false;
         }
-        Person other = obj as Person;
+        Person? other = obj as Person;
         return Equals(other);
     }
 
@@ -27,9 +27,24 @@ public class Person : IEquatable<Person>
         return BankAccount;
     }
 
-    public bool Equals(Person other)
+    public bool Equals(Person? other)
     {
         if (other == null) return false;
         return this.BankAccount.Equals(other.BankAccount);
+    }
+
+    public int Compare(Person? x, Person? y)
+    {
+        if (x == null) {
+            if (y == null)
+                return 0;
+            else
+                return -1;
+        } else {
+            if (y == null)
+                return 1;
+            else
+                return x.BankAccount.CompareTo(y.BankAccount);
+        }
     }
 }
