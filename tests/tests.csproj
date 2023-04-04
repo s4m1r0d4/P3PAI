@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../lib/CryptographyLibrary/CryptographyLibrary.csproj" />
+    <ProjectReference Include="../lib/SerializationLibrary/SerializationLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oHXa2zzZy1YaY0H5ONSnQ1/9Fb5ikciuykyw/6VZWPrCnS3FGV1vm3Jg2bijYZ0D1Ekv1iObLV9KHJR+iSSzzw==",
+  "dgSpecHash": "Zf272OEnwv22j3JWdR7J7KT9imDkQJ56+nD5/tQXhzi75whv2QonTYLDCDMQA0t1e1WZNv6xaghsBIP16E5kXg==",
   "success": true,
   "projectFilePath": "/home/rc/Documents/PAI/Practica3/lib/SerializationLibrary/SerializationLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/rc/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

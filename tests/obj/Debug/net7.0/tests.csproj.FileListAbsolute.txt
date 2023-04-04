@@ -99,3 +99,7 @@
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.pdb
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/tests.genruntimeconfig.cache
 /home/rc/Documents/PAI/Practica3/tests/obj/Debug/net7.0/ref/tests.dll
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.dll
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.dll
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/SerializationLibrary.pdb
+/home/rc/Documents/PAI/Practica3/tests/bin/Debug/net7.0/PeopleLibrary.pdb

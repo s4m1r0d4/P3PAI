@@ -9,23 +9,66 @@ using FastJson = System.Text.Json.JsonSerializer;
 
 public class Serializer
 {
-    static readonly string jsonFileName = "data.json";
-    static readonly string xmlFileName = "data.xml";
-    List<Person>? peopleData;
+    public string jsonFileName = "";
+    public string jsonPath = "";
+    public string xmlFileName = "";
+    public string xmlPath = "";
 
-    public Serializer(List<Person>? pd)
+    public List<Person> peopleData;
+
+    public Serializer(List<Person> pd, string jf = "data.json",
+        string xf = "data.xml")
     {
         peopleData = pd;
+        jsonFileName = jf;
+        xmlFileName = xf;
+        string currentDirectory = System.IO.Directory.
+            GetParent(CurrentDirectory)?.ToString() ?? "";
+        jsonPath = Combine(currentDirectory, jsonFileName);
+        xmlPath = Combine(currentDirectory, xmlFileName);
     }
 
     public void Serialize()
     {
-        string currentDirectory = System.IO.Directory.GetParent(CurrentDirectory)?.ToString() ?? "";
-        string jsonPath = Combine(currentDirectory, jsonFileName);
-        string xmlPath = Combine(currentDirectory, xmlFileName);
+        // Serialize XML
+        XmlSerializer xs = new(type: peopleData.GetType());
+        using (FileStream stream = File.Create(xmlPath)) {
+            xs.Serialize(stream, peopleData);
+        }
 
-        /* WriteLine($"Json path is: '{jsonPath}'");
-        WriteLine($"XML path is: '{xmlPath}'"); */
+        // Serialize JSON
+        using (StreamWriter jsonStream = File.CreateText(jsonPath)) {
+            Newtonsoft.Json.JsonSerializer jss = new();
+            jss.Serialize(jsonStream, peopleData);
+        }
+    }
 
+    /// <summary>
+    /// Deserializes files into peopleData field. After calling this method,
+    /// you can assign your list to the peopleData field.
+    /// </summary>
+    /// <returns></returns>
+    public async void Deserialize()
+    {
+        List<Person>? jsonPeople = new();
+        List<Person>? xmlPeople = new();
+
+        // Deserialize JSON
+        using (FileStream jsonLoad = File.Open(jsonPath, FileMode.Open)) {
+            jsonPeople = await FastJson.DeserializeAsync(utf8Json: jsonLoad,
+                returnType: typeof(List<Person>)) as List<Person>;
+        }
+
+        // Deserialize XML
+        var xs = new XmlSerializer(typeof(List<Person>));
+        using (FileStream xmlLoad = File.Open(xmlPath, FileMode.Open)) {
+            xmlPeople = (List<Person>)xs.Deserialize(xmlLoad);
+        }
+        // Lazy check if equal data is read. Further checking can be done in unit tests
+        if (jsonPeople.Count != xmlPeople.Count)
+            throw new Exception("Read diferent data from json and xml files!");
+
+        // Can either be jsonPeople or xmlPeople
+        peopleData = jsonPeople;
     }
 }

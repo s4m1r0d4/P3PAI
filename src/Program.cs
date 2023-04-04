@@ -3,11 +3,10 @@ using PeopleLibrary;
 using SerializationLibrary;
 class Program
 {
+    List<Person> people;
+    Serializer serializer;
     static void Main(string[] args)
     {
-        List<Person> lp = new();
         Console.WriteLine("Hello, World!");
-        Serializer sc = new(lp);
-        sc.Serialize();
     }
 }
