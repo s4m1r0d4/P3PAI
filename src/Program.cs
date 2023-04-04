@@ -30,7 +30,7 @@ class Program
             WriteLine($"1 person has been loaded");
 
         while (true) {
-            readCredentials();
+            ReadCredentials();
             Person? p = lookUpAccount();
             if (p is not null) {
                 WriteLine($"The account {p.BankAccount} has logged in successfully!");
@@ -38,6 +38,7 @@ class Program
                 WriteLine($"Account with these credentials wasn't found, creating new account...");
                 p = GetNewPerson();
                 people.Add(p);
+                sc.peopleData = people;
                 sc.Serialize();
                 WriteLine("Login succesfull!");
             }
@@ -54,37 +55,43 @@ class Program
         p.LastName = LastName;
         p.BankPassword = Protector.Encrypt(Password, Protector.specialWord);
 
-        decimal? Salary = null;
+        decimal Salary;
+        bool ok = false;
         do {
             Write("Enter your salary: ");
             try {
                 Salary = Decimal.Parse(ReadLine());
+                ok = true;
             } catch {
                 WriteLine("Invalid salary");
             }
-        } while (Salary is null);
+        } while (!ok);
 
-        DateTime? DateOfBirth = null;
+        DateTime DateOfBirth;
+        ok = false;
         do {
             Write("Enter your date of birth: ");
             try {
                 DateOfBirth = DateTime.Parse(ReadLine());
+                ok = true;
             } catch {
                 WriteLine("Invalid date of birth");
             }
-        } while (DateOfBirth is null);
+        } while (!ok);
 
-        int? NumberOfChildren = null;
+        int NumberOfChildren = 0;
+        ok = false;
         do {
             Write("Enter your number of Children: ");
             try {
                 NumberOfChildren = Int32.Parse(ReadLine());
+                ok = true;
             } catch {
                 WriteLine("Invalid number");
             }
-        } while (NumberOfChildren is null);
+        } while (!ok);
 
-        p.Children = GetChildren((int)NumberOfChildren);
+        p.Children = GetChildren(NumberOfChildren);
 
         // Autoincrement
         p.BankAccount = people.Count + 1;
@@ -104,11 +111,11 @@ class Program
 
         List<Person> children = new();
         for (int i = 0; i < numberOfChildren; ++i) {
-            string? FirstName = null;
+            string FirstName = String.Empty;
             do {
                 Write($"Enter children {i + 1} name: ");
                 FirstName = ReadLine();
-            } while (FirstName is null);
+            } while (FirstName.Length == 0);
             children.Add(new() { FirstName = FirstName });
         }
         return children;
@@ -130,17 +137,17 @@ class Program
         return null;
     }
 
-    private static void readCredentials()
+    private static void ReadCredentials()
     {
         do {
             Write("Please enter your first name: ");
             FirstName = ReadLine();
-        } while (FirstName is null);
+        } while (FirstName.Length == 0);
 
         do {
             Write("Please enter your last name: ");
             LastName = ReadLine();
-        } while (LastName is null);
+        } while (LastName.Length == 0);
 
         do {
             Write("Please enter your password: ");
