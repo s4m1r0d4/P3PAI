@@ -38,14 +38,14 @@ public class CryptographyUnitTests
         string encryptedText = "fdtjSsjGbPxf+KluxU1Q2A==";
         string password = "distinto";
         string result = String.Empty;
+        bool exceptionThrown = false;
 
         try {
             result = Protector.Decrypt(encryptedText, password);
         } catch {
-            // Exception was expected, return
-            return;
+            exceptionThrown = true;
         }
 
-        Assert.True(false, "Decryption should've thrown an excpetion because password was incorrect");
+        Assert.True(exceptionThrown, "Expected excpetion because password was incorrect");
     }
 }

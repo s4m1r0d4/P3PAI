@@ -2,7 +2,6 @@
 
 using System.Xml.Serialization;
 using PeopleLibrary;
-using static System.Console;
 using static System.Environment;
 using static System.IO.Path;
 using FastJson = System.Text.Json.JsonSerializer;
@@ -44,7 +43,7 @@ public class Serializer
     }
 
     /// <summary>
-    /// Deserializes files into peopleData field.==
+    /// Deserializes files into peopleData field.
     /// </summary>
     /// <Usage>List<Person> x = await serializer.Deserialize() </Usage>
     public async Task<List<Person>> Deserialize()
